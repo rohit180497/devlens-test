@@ -10,8 +10,25 @@ def calculate_discount(price, discount_percent):
 
     return round(final_price, 2)
 
+def calculate_tax(price, tax_percent):
+    """
+    Calculate the final price after applying tax.
+    """
+    if tax_percent < 0:
+        raise ValueError("Tax percent cannot be negative")
+
+    tax_amount = price * (tax_percent / 100)
+    final_price = price + tax_amount
+
+    return round(final_price, 2)
 
 if __name__ == "__main__":
     price = 100
     discount = 10
-    print(f"Final price after {discount}% discount:", calculate_discount(price, discount))
+    tax = 8
+
+    discounted_price = calculate_discount(price, discount)
+    final_price = calculate_tax(discounted_price, tax)
+
+    print(f"Price after {discount}% discount:", discounted_price)
+    print(f"Final price after {tax}% tax:", final_price)
