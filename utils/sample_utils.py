@@ -32,4 +32,3 @@ if __name__ == "__main__":
 
     print(f"Price after {discount}% discount:", discounted_price)
     print(f"Final price after {tax}% tax:", final_price)
-    print(f"Final price after {discount}% discount and {tax}% tax:", calculate_tax(calculate_discount(price, discount), tax))
