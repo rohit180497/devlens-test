@@ -60,3 +60,4 @@ if __name__ == "__main__":
 
     # Unused variable (code smell)
     temp_value = 12345
+    print(temp_value)
