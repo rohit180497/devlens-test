@@ -60,7 +60,3 @@ if __name__ == "__main__":
 
     # Unused variable (code smell)
     temp_value = 12345
-
-    # Potential crash
-    numbers = [1, 2, 3]
-    print(numbers[5])
